@@ -1,0 +1,37 @@
+
+Theorem: 
+-------
+ Let  F be a container, G  a functor on Set and alpha a cartesian morphism 
+ alpha: G -> F. Then G is a container.
+
+Proof:
+----
+Let FX = [| S <| P |] = Sigma (s:S) (P s -> X)
+
+G is given by  a coproduct of terminal-object preserving functors. Let A=G1
+ GX = Sigma (a:A) (G_a X)
+
+alpha is natural, hence it maps each a : A to an s: S through alpha_1 : A -> S.
+Since we are working in Set, alpha can be decomposed as a sum of morphisms.
+ Sigma (a:A) (G_a X -> P (alpha_1 a) -> X), each of which must be an iso, by the lemma below.
+Hence G is a sum of representables, i.e. a container.
+
+Lemma: Given a pullback square
+------
+         p0
+    P ---> A
+    |            |  f
+    v           v
+    B---->B'
+          g
+
+Then, if g is an iso, p0 is an iso.
+
+Proof:
+-----
+Construct h : A -> P using the UP of the pullback on the following span:   
+        B <--g^{-1}.f-- A -id--> A
+Then p0.h = id.
+But, h.p0 must be the identity by uniqueness of the map P->P making the corresponding diagram commute.
+ 
+
