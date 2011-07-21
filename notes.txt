@@ -1,0 +1,69 @@
+Topics
+
+* Extensional characterisation of containers & quotient containers.
+
+Important literature
+	  * Hasegawa
+	  * Gambino & Kock
+	  * Adamek & Velebil
+
+Theorem: F is container iff each slice of El(F) has initial object.
+[see Gambino & Cock]
+
+Theorem: F is Qcont iff each slice of El(F) has a transitive object.
+[see Hasegawa for analytic functors]
+[check proof]
+
+Theorem:
+Assume F is small (see Adamek?)
+then F is container iff F preserves (wide) pullbacks.
+[fix size, either use Adameks or introduce alternative]
+
+Sketch:
+=> : easy
+
+<= :
+
+Any functor F : Set -> Set is a coproduct of functors that preserve 1.
+For any s : F1 define F s : Set -> Set as Fs X = { x : F x | F ! x = s}. Then 
+F X = Sigma s : S. F s X and Fs 1 ~ 1.
+
+F_s preserves pbs (because F does) and 1 hence it preserves all
+limits. And hence it is isomorphic to a hom functor (if we assume the
+existence of large limits)., i.s. F s X ~ P s -> X.
+
+Theorem:
+Assume F is small (see Adamek?)
+then F is Qcontainer iff F weakly preserves (wide) pullbacks.
+
+check Adamek's proof. Is this constructive?
+[Hasegawa's isn't]
+
+* Derivatives of containers & quotient containers
+
+** Specification of derivatives
+
+** Hank's combinator
+
+down : F X -> F (partial F)
+
+** Functorial spec
+
+** Theorem: container transfer along cart.morphisms
+
+** Derivative of QConts
+
+* Generalisation of Quotient Containers
+  given by a 
+  S : Groupoid
+  P : S -> Set (functor)
+
+  We can show that every QCont gives rise to this
+  but not vice versa (constructively) since we need the skeleton of S.
+
+  To develop the theory we can systematically replace Pi by Ends and Sigma by Coends. 
+
+  Some issues:
+  - how to prove the representation theorem?
+     i.e. how to recover the groupoid?
+  - Do we get some new examples?
